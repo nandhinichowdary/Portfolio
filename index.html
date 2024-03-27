@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-image: url("https://wallpaperaccess.com/full/2024245.jpg");
+            background-color:black;
+            background-repeat: no-repeat;
+            background-size:1550px 900px;
+            color:white;
+        }
+        .nav ul{
+            list-style-type: none;
+            margin: 0 20px;
+            padding: 30px 20px;
+            text-align: right;
+        }
+        .nav ul li{
+            display: inline-block;
+        }
+        .nav ul li a{
+            padding: 4px;
+            margin: 10px 20px;
+            color: rgb(231, 220, 220);
+            font-size: 28px;
+            text-decoration: none;
+            position: relative;
+        }
+        .nav ul li a::after{
+            content: '';
+            width:0;
+            height: 3px;
+            background: #330614;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .nav ul li a:hover::after{
+            width: 100%;
+        }
+        .header-text{
+            margin-top: -30px;
+        }
+        .header-text h1{
+            margin-top: 15%;
+            font-size: 70px;
+            color:black;
+            margin-left: 10%;
+        }
+        .header-text h1 span{
+            color: #cd0141;
+        }
+        .header-text p{
+            font-size: 40px;
+            color: black;
+            margin-top: -2%;
+            margin-left: 10%;
+        }
+        #about{
+            padding-top: 35%;
+            color: black;
+        }
+        .row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .about-col-1{
+            flex-basis: 35%;
+        }
+        .about-col-1 img{
+            width: 100%;
+            border-radius: 15px;
+            margin-left: 5%;
+        }
+        .about-col-2{
+            flex-basis: 60%;
+        }
+        .tab-titles{
+            display: flex;
+            margin: 20px 0 40px;
+        }
+        .tab-links{
+            font-size:25px;
+            color: rgb(236, 236, 246);
+            margin-right: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+        }
+        .tab-links::after{
+            content: '';
+            width: 0;
+            height: 3px;
+            background-color: #7562f2;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        .tab-links.active-link::after{
+            width: 50%;
+        }
+        .tab-contents ul li{
+            color: rgb(243, 50, 6);
+            font-size: 20px;
+            margin: 10px 0;
+            list-style-type:none;
+        }
+        .tab-contents ul li span{
+            color: #f4f3fb;
+        }
+        .tab-contents {
+            display: none;
+        }
+        .tab-contents.active-tab{
+            display: block;
+        }
+        .contact-left{
+            flex-basis: 35%;
+            margin-left: 5%;
+        }
+        .contact-right{
+            flex-basis: 60%;
+        }
+        .contact-left p{
+            margin-top: 30px;
+        }
+        .contact-left p i{
+            color:#1bc0e0;
+            margin-right: 15px;
+            font-size: 25px;
+        }
+        .social-icons{
+            margin-top: 30px;
+        }
+        .social-icons a{
+            text-decoration: none;
+            font-size: 30px;
+            margin-right: 15px;
+            color:#d463f1;
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        .social-icons a:hover{
+            color: #17a3be;
+            transform: translateY(-5px);
+        }
+        .btn{
+            display: block;
+            margin: 50px auto;
+            width:fit-content;
+            border:1px solid black;
+            padding: 14px 50px;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+            transition: background 0.5s;
+        }
+        .btn:hover{
+            background:rgb(23, 235, 27);
+        }
+        .btn.btn2{
+            display: inline-block;
+            background: rgba(4, 219, 22, 0.815);
+        }
+        form  input, form textarea{
+            width:90%;
+            border:0;
+            outline: none;
+            background: #262626;
+            padding: 15px;
+            margin: 15px 0;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        form .btn2{
+            padding: 14px 60px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .portfolio-left img{
+            width: 550px;
+            height: 375px;
+            border-radius: 15px;
+            margin-left: 5%;
+        }
+        .portfolio-left{
+            flex-basis: 35%;
+            margin-top: 30px;
+        }
+        .portfolio-right{
+            flex-basis: 60%;
+            padding: 1% 0;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#Project" >Project</a></li>
+        <li><a href="#contact" >Contact</a></li>
+    </ul>
+</div>
+    <div class="header-text">
+        <h1 style="color: white;">Hey there!,I'm <span>NANDINI</span></h1>
+        <p style="color: white;"><b>A web developer</b></p>
+    </div>
+    <section id="about">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 style="font-size: 60px;font-weight: 600;color:white;">About Me</h1>
+                    <p style="color: white;font-size: 20px;">Hello, I'm NANDINI, currently i'm pursuing  B.Tech second year at KIET institutions. My field of study is Computer Science and Engineering with a specialization of Artificial Intelligence and Machine Learning.Here i'm web developer.And my long-term goal is to get a good job in my dream company.</p>
+                    <p style="color: white;font-size: 20px;">Contact no :8074442568 </p>
+                    <p style="color: white;font-size: 20px;">Email ID : <a href="mailto:nandinichowdary7449@gmail.com" style="color: rgb(95, 147, 200);text-decoration: none;">nandinichowdary7449@gmail.com</a></p>
+                    <
+                    <div class="tab-titles">
+                        <p  class="tab-links active-link" onclick="opentab('skills')"><b>Skills</b></p>
+                        <p  class="tab-links" onclick="opentab('education')"><b>Education</b></p>
+                    </div>
+                        <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Technical Skills</span><br>C-Language<br>Python<br>HTML<br>CSS<br>JavaScript</li>
+                            <li><span>Professional Skills</span><br>Communication<br>Team work</li><br>
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Now studying B-TECH in KIET Institutions</li><br>
+                            <li><span>2020-2022</span><br>Inter from Sai Ram Junior College</li><br>
+                            <li><span>2019-2020</span><br>10th from Gowthami School</li>
+                        </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <h1 style="font-size: 45px;text-align: center;">My Project</h1>
+    <div id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="portfolio-right">
+                    <img src="project.jpg" alt="project">
+                </div>
+                <div class="portfolio-left">
+                    <p>This is our team project </p>
+                    <p>Here Our project name is (Sentimental Analysis) <br> Sentimental Analysis project tells the emotions of persons.and it will feedback of the prod</p>
+                    <button type="button" class="btn btn2"><a href="https://www.linkedin.com/posts/pokuri-nandini-62a636254_we-done-our-project-sentimental-analysis-activity-7118533474415767552-liOC?utm_source=share&utm_medium=member_android" style="text-decoration: none;color: white;">View Source</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="contact">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title" style="font-size: 50px;">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>nandinichowdary7449@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>807444256</p>
+                    <div class="social-icons">
+                        <a href=""><i class="https://www.instagram.com/nandinichowdary36?igsh=dzc1enN0NGlvZzlp"></i></a>
+                        <a href="https://www.linkedin.com/in/pokuri-nandini-62a636254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/nandhinichowdary"><i class="fab fa-github"></i></a>
+                    
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text"  name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
